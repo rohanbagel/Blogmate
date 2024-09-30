@@ -1,0 +1,23 @@
+{% extends "partials/base.html" %}
+{% block title %}Logout Page{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-info text-white text-center py-4">
+                    <h2>Goodbye for Now!</h2>
+                    <p class="mb-0">You have successfully logged out.</p>
+                </div>
+                <div class="card-body text-center py-5">
+                    <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+                    <p class="lead">We're looking forward to seeing you again!</p>
+                    <a href="{% url 'users-login' %}" class="btn btn-lg btn-outline-info mt-3 px-5">Log Back In</a>
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <small>Need help? <a href="#">Contact Support</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
